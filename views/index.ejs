@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="chat.jpg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Chat</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="styles.css" />
+    <!-- FontAwesome stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/61470cb4ed.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <div class="chat__container">
+      <div class="chat__header">
+        <img
+          src="https://image.freepik.com/free-vector/chat-logo-design_93835-108.jpg"
+          alt="chat-logo"
+        />
+        <div class="chat__headerLogo">
+          <button title="attach file">
+            <i class="fas fa-paperclip fa-1x"></i>
+          </button>
+          <button title="attach Image">
+            <i class="fas fa-images fa-1x"></i>
+          </button>
+          <button title="Account"><i class="fas fa-user fa-1x"></i></button>
+
+          <button title="Sign Out">
+            <i class="fas fa-sign-out-alt fa-1x"></i>
+          </button>
+        </div>
+      </div>
+      <div class="chat__body">
+        <div id="chat__bodyMessage"></div>
+        <form id="chat__form" class="chat__bodyInput">
+          <input
+            id="chat__bodyInputMessage"
+            type="text"
+            placeholder="Type your message..."
+          />
+          <button id="chat__inputButton" type="submit">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js" async defer></script>
+  </body>
+</html>
